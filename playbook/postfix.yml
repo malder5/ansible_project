@@ -1,0 +1,18 @@
+---
+- hosts: cent
+  gather_facts: no
+  remote_user: root
+
+  tasks:
+    - name: Install postfix
+      yum:
+        name: postfix
+        state: installed
+      tags: install
+
+    - name: Uninstall postfix
+      yum:
+        name: postfix
+        state: absent
+      tags: uninstall
+
