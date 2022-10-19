@@ -8,11 +8,11 @@
       yum:
         name: postfix
         state: installed
-      tags: install
+      tags: init postfix
 
     - name: Uninstall postfix
       yum:
         name: postfix
         state: absent
-      tags: uninstall
+      tags: drop postfix
 
