@@ -1,0 +1,7 @@
+---
+- hosts: ubuntu
+  gather_facts: true
+  remote_user: root
+  roles:
+          - role: ng_fpm
+            nginx_document_root: /opt/nginx/ansible/
