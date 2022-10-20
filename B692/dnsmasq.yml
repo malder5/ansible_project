@@ -1,0 +1,7 @@
+---
+- hosts: cent
+  gather_facts: yes
+  remote_user: root
+  become: yes
+  roles:
+    - dnsmasq
