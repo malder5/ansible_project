@@ -1,0 +1,6 @@
+- hosts: cent
+  gather_facts: no
+  remote_user: root
+  become: yes
+  roles:
+   - vstpd
