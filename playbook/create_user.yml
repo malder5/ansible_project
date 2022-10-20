@@ -28,4 +28,4 @@
       authorized_key:
         user: rom
         state: present
-        key: "{{ lookup('file', '/home/roman/.ssh/id_rsa.pub') }}"
+        key: "{{ lookup('file', '/home/rom/.ssh/id_rsa.pub') }}"
