@@ -5,28 +5,28 @@
     name: vsftpd
     state: installed
 
-- name:
+- name: anonymous_enable=NO
   lineinfile:
-    path: /etc/vsftpd.conf
+    path: /etc/vsftpd/vsftpd.conf
     regexp: '^anonymous_enable'
     line: 'anonymous_enable=NO'
     backup: yes
 
-- name:
+- name: local_enable=YES
   lineinfile:
-    path: /etc/vsftpd.conf
+    path: /etc/vsftpd/vsftpd.conf
     regexp: '^local_enable'
     line: 'local_enable=YES'
     backup: yes
 
-- name:
+- name: write_enable=YES
   lineinfile:
     path:  /etc/vsftpd/vsftpd.conf
     regexp: '^write_enable'
     line: 'write_enable=YES'
     backup: yes
 
-- name:
+- name: chroot_local_user=YES
   lineinfile:
     path: /etc/vsftpd/vsftpd.conf
     regexp: '^chroot_local_user'
